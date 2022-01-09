@@ -1,0 +1,44 @@
+{
+    "name": "eliuflorez/tenancy-driver-pgsql",
+    "description": "The tenancy/tenancy database driver for pgsql",
+    "keywords": ["database", "tenancy", "pgsql", "postgresql"],
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "^8.0",
+        "eliuflorez/tenancy-database": "^1.0.3",
+        "eliuflorez/tenancy-connections": "*",
+        "doctrine/dbal": "^2.9"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "^1.7",
+        "laravel/laravel": "^8.0",
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.0",
+        "eliuflorez/tenancy-migration": "*",
+        "eliuflorez/tenancy-testing": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tenancy\\Database\\Drivers\\Pgsql\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tenancy\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Eliu Florez",
+            "email": "eliufz@gmail.com",
+            "homepage": "https://github.com/EliuFlorez"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tenancy\\Database\\Drivers\\Pgsql\\Provider"
+            ]
+        }
+    }
+}
